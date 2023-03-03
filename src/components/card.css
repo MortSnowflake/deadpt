@@ -1,0 +1,13 @@
+.card {
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 5px;
+    background: aqua;
+    background-image: url(/img/map_shirt.png);
+    background-position: center;
+    background-size: cover;
+    height: 188px;
+    width: 122px;
+    display: flex;
+    
+}

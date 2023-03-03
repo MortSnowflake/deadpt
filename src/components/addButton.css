@@ -1,0 +1,11 @@
+.addButton {
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 5px;
+    height: 188px;
+    width: 120px;
+    display: flex;
+    font-size: 110px;
+    justify-content: center;
+    align-items: center;    
+}
