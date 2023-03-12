@@ -7,7 +7,7 @@ function useToastMessage() {
     isLoading: false,
   });
 
-  const handleToastMessage = (bg, message, isLoading, timeout) => {
+  const handleToastMessage = (bg: string, message: string, isLoading: boolean, timeout: number) => {
     setToastMessage({
       bg,
       message,
