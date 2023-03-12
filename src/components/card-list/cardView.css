@@ -1,4 +1,4 @@
-.card {
+.cardView {
     border: 1px solid black;
     border-radius: 7px;
     margin: 5px;
@@ -8,6 +8,5 @@
     background-size: cover;
     height: 188px;
     width: 122px;
-    display: flex;
-    
+    display: flex;    
 }
