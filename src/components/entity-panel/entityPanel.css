@@ -1,0 +1,52 @@
+.entityPanel {
+    display: flex;
+    height: 50%;
+    border-top: 4px solid grey;
+    border-bottom: 4px solid grey;
+    margin: auto 0px auto 0px;
+}
+
+.entityGrid {
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.signPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-left: 2px solid grey;
+    height: 100%;
+    width: 200px;
+}
+
+.signCard {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 5px;
+    background: aqua;
+    background-image: url(/img/map_shirt.png);
+    background-position: center;
+    background-size: cover;
+    height: 188px;
+    width: 122px;
+    display: flex;
+}
+
+.addEntity {
+    border: 3px solid darkkhaki;
+    border-radius: 7px;
+    margin: 40px 10px 0px auto;
+    height: 120px;
+    width: 120px;
+    font-size: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}

@@ -3,6 +3,7 @@ import "./cardList.css"
 import "./addButton.css"
 import { CardView } from "./cardView";
 import { Card } from "../../types/card";
+import { Box } from "@chakra-ui/react";
 
 
 export function CardList() {
@@ -20,12 +21,12 @@ export function CardList() {
     }
 
    return (
-        <div className="cardList">
+        <Box className="cardList">
             {cards.map(card =>
               <CardView
               onRemove={() => handleRemoveCard(card)}
               ></CardView>)}
             <button className="addButton" onClick={handleAddCard}>+</button>
-        </div>
+        </Box>
    )
 } 
