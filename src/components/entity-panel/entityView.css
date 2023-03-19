@@ -1,0 +1,8 @@
+.entityView {
+    border: 3px solid darkkhaki;
+    border-radius: 7px;
+    height: 150px;
+    width: 150px;
+    margin: 20px 10px 20px 10px;
+    background-color: rgb(247, 247, 170)
+}

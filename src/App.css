@@ -1,6 +1,23 @@
 .App {
-    height: 100vw;
+    box-sizing: border-box;
+    height: 99vh;
+    margin: 5px;
     padding: 10px;
     border: 3px solid lightgrey;
     border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainField {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    border-left: 4px solid grey;
+}
+
+.sidePanel {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
 }

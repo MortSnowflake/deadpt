@@ -1,9 +1,6 @@
 .cardList {
-    border: 2px solid grey;
-    border-radius: 7px;
-    height: 200px;
-    margin: 0px 0px 0px 0px;
+    height: 230px;
     display: flex;
-    position: relative;
-    top: 690px;
+    align-items: center;
+    padding-left: 5px
 }
