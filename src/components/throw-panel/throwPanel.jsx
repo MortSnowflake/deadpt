@@ -1,20 +1,30 @@
 import { Box, Button, Flex } from "@chakra-ui/react"
 import { useState } from "react"
+import { throwType } from "../../types/throw"
 import "./throwPanel.css"
 
 export function ThrowPanel () {
 
     const [result, setResult] = useState([])
     
-    function handleDiceThrow (a, b) {
-        let newThrow 
-            if (a === 1) {
-                newThrow = Math.floor(Math.random() * (b - 1 + 1) + 1)
-            } else if (a === 2) {
-                newThrow = Math.max(Math.floor(Math.random() * (b - 1 + 1) + 1), Math.floor(Math.random() * (b - 1 + 1) + 1)) 
-            } else if (a === -2) {
-                newThrow = Math.min(Math.floor(Math.random() * (b - 1 + 1) + 1), Math.floor(Math.random() * (b - 1 + 1) + 1))
+    function handleDiceThrow (rollType, edges) {
+        const firstThrow = Math.floor(Math.random() * edges + 1)
+        const secondThrow = Math.floor(Math.random() * edges + 1)
+        let newThrow
+            switch(rollType) {
+                case throwType.normal:
+                    newThrow = firstThrow;
+                    break;
+                case throwType.advantage:
+                    newThrow = Math.max(firstThrow, secondThrow);
+                    break;
+                case throwType.interference:
+                    newThrow = Math.min(firstThrow, secondThrow);
+                    break;
+                default:
+                    break;
             }
+           
         setResult([...result, newThrow])
     }
 
@@ -22,9 +32,9 @@ export function ThrowPanel () {
         <Box className="throwPanel">
             <Box className="throwLog">{result}</Box>
             <Flex className="throwButtons">
-               <Button onClick={() => handleDiceThrow(2,4)}>+2d4</Button>
-               <Button marginLeft='10px' onClick={() => handleDiceThrow(1,4)}>d4</Button>
-               <Button marginLeft='10px' onClick={() => handleDiceThrow(-2,4)}>-2d4</Button>
+               <Button onClick={() => handleDiceThrow(throwType.advantage,4)}>+2d4</Button>
+               <Button marginLeft='10px' onClick={() => handleDiceThrow(throwType.normal,4)}>d4</Button>
+               <Button marginLeft='10px' onClick={() => handleDiceThrow(throwType.interference,4)}>-2d4</Button>
             </Flex>            
         </Box>
     )
