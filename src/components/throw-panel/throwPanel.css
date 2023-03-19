@@ -15,6 +15,7 @@
     height: 150px;
     font-size: 16px;
     overflow-y: scroll;
+    padding-left: 15px;
 }
 
 .throwButtons {

@@ -1,4 +1,4 @@
-export enum throwType {
+export enum ThrowType {
     advantage,
     normal,
     interference
