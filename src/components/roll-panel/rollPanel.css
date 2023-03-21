@@ -1,4 +1,4 @@
-.throwPanel {
+.rollPanel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,17 +9,30 @@
     margin-top: auto;    
 }
 
-.throwLog {
+.rollLog {
     border: 3px solid grey;
-    width: 200px;
+    width: 240px;
     height: 150px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
     overflow-y: scroll;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
-.throwButtons {
+.rollButtons {
     margin-top: 15px;
     padding: 10px;
     display: flex;
+}
+
+.rollTypeAdvantage {
+    color: green;
+}
+
+.rollTypeInterference {
+    color: red;
+}
+
+.dummy {
+    margin-top: 25px;
 }
