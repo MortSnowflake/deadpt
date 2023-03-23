@@ -1,5 +1,5 @@
 export enum RollType {
-    advantage,
-    normal,
-    interference
+    advantage = 'rollTypeAdvantage',
+    normal = 'rollTypeNormal',
+    interference = 'rollTypeInterference'
 }
