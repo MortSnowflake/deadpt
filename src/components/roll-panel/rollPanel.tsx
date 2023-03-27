@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 import { useRef, useState } from "react"
 import { RollType } from "../../types/roll"
 import { rollWithHint } from "../../utils/dice-roller"
@@ -14,7 +14,7 @@ export function RollPanel () {
     }
     
     function handleDiceRoll (rollType: RollType) {
-        let newRoll: any = rollWithHint(rollType);
+        let newRoll: string[] = rollWithHint(rollType);
         setResult([...result, newRoll]);
         onUpdate()
     }
@@ -25,9 +25,9 @@ export function RollPanel () {
                 <Box className='dummy' ref={scrollEl}/>
             </Box>
             <Flex className="rollButtons">
-               <Button onClick={() => handleDiceRoll(RollType.advantage)}>+2d4</Button>
-               <Button marginLeft='10px' onClick={() => handleDiceRoll(RollType.normal)}>d4</Button>
-               <Button marginLeft='10px' onClick={() => handleDiceRoll(RollType.interference)}>-2d4</Button>
+               <button className="rollWithInt" onClick={() => handleDiceRoll(RollType.advantage)}/>
+               <button className="rollNorm" onClick={() => handleDiceRoll(RollType.normal)}/>
+               <button className="rollWithAdv" onClick={() => handleDiceRoll(RollType.interference)}/>
             </Flex>            
         </Box>
     )

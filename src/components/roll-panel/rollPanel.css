@@ -20,9 +20,11 @@
 }
 
 .rollButtons {
-    margin-top: 15px;
+    width: 240px;
+    margin-top: 10px;
     padding: 10px;
     display: flex;
+    justify-content: space-around;
 }
 
 .rollTypeAdvantage {
@@ -35,4 +37,32 @@
 
 .dummy {
     margin-top: 25px;
+}
+
+.rollWithInt {
+    height: 55px;
+    width: 55px;
+    background-image: url(/img/btn_2down.png);
+    background-position: center;
+    background-size: cover;  
+}
+
+.rollNorm {
+    height: 55px;
+    width: 55px;
+    background-image: url(/img/roll_color.png);
+    background-position: center;
+    background-size: cover;  
+}
+
+.rollWithAdv {
+    height: 55px;
+    width: 55px;
+    background-image: url(/img/btn_2up.png);
+    background-position: center;
+    background-size: cover;  
+}
+
+.rollWithInt:hover, .rollNorm:hover, .rollWithAdv:hover {
+    transform: scale(1.12);
 }

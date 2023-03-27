@@ -23,15 +23,16 @@ function rollWithParameter (rollType: RollType, edges: number = 4): string[] {
     }
 }
 
-const rus = ['Успех', 'Частичный успех', 'Провал'];
-const eng = ['Success', 'Partial success', 'Fail'];
+// const rus: string[] = ['Успех', 'Частичный успех', 'Провал'];
+// const eng: string[] = ['Success', 'Partial success', 'Fail'];
 
 export function rollWithHint (rollType: RollType) {
     let diceRoll: string[] = rollWithParameter(rollType);
     switch(diceRoll[1]) {
-        case '1': return [...diceRoll, rus[2]];
+        case '1': return [...diceRoll, 'Провал'];
         case '2':
-        case '3': return [...diceRoll, rus[1]];
-        case '4': return [...diceRoll, rus[0]];
+        case '3': return [...diceRoll, 'Частичный успех'];
+        case '4': return [...diceRoll, 'Успех'];
+        default: return []
     }          
 }
