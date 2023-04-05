@@ -1,0 +1,73 @@
+.rollPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 250px;
+    height: 250px;
+    margin-top: auto;
+    margin-top: auto;    
+}
+
+.rollLog {
+    border: 3px solid grey;
+    width: 240px;
+    height: 150px;
+    font-size: 14px;
+    font-weight: bold;
+    overflow-y: scroll;
+    padding-left: 10px;
+}
+
+.rollButtons {
+    width: 240px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rollTypeAdvantage {
+    color: green;
+}
+
+.rollTypeInterference {
+    color: red;
+}
+
+.dummy {
+    margin-top: 25px;
+}
+
+.rollWithInt {
+    height: 55px;
+    width: 55px;
+    background-image: url(/img/btn_2down.png);
+    background-position: center;
+    background-size: cover;  
+}
+
+.rollNorm {
+    height: 55px;
+    width: 55px;
+    background-image: url(/img/roll_color.png);
+    background-position: center;
+    background-size: cover;  
+}
+
+.rollWithAdv {
+    height: 55px;
+    width: 55px;
+    background-image: url(/img/btn_2up.png);
+    background-position: center;
+    background-size: cover;  
+}
+
+.rollWithInt:hover, .rollNorm:hover, .rollWithAdv:hover {
+    transform: scale(1.12);
+}
+
+.rollWithInt:active, .rollNorm:active, .rollWithAdv:active {
+    transform: scale(1);
+    opacity: 0.8;
+}
