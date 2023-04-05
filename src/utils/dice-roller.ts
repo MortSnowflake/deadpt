@@ -1,3 +1,4 @@
+import { HintsInterface } from './../types/hintsInterface';
 import { RollType } from "../types/roll";
 
 export const d = (edges: number) => Math.floor(Math.random() * edges + 1);
@@ -23,16 +24,22 @@ function rollWithParameter (rollType: RollType, edges: number = 4): string[] {
     }
 }
 
-// const rus: string[] = ['Успех', 'Частичный успех', 'Провал'];
-// const eng: string[] = ['Success', 'Partial success', 'Fail'];
+const hints: HintsInterface = {
+    failRus: "Провал!",
+    partialRus: "Частичный успех",
+    successRus: "Успех!",
+    failEng: "Fail!",
+    partialEng: "Partial success",
+    successEng: "Success!"
+}
 
 export function rollWithHint (rollType: RollType) {
     let diceRoll: string[] = rollWithParameter(rollType);
     switch(diceRoll[1]) {
-        case '1': return [...diceRoll, 'Провал'];
+        case '1': return [...diceRoll, hints.failRus];
         case '2':
-        case '3': return [...diceRoll, 'Частичный успех'];
-        case '4': return [...diceRoll, 'Успех'];
+        case '3': return [...diceRoll, hints.partialRus];
+        case '4': return [...diceRoll, hints.successRus];
         default: return []
     }          
 }
